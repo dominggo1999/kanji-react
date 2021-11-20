@@ -52,7 +52,7 @@ const ReviewProvider = ({ children }) => {
 
   const changeRange = (start, finish) => {
     let newList;
-    if(start && finish && start < finish && start > 0 && finish <= 3031) {
+    if(start && finish && start < finish && start > 0 && finish <= kanji.length) {
       newList = (kanji.slice(start - 1, finish));
       const nextChar = newList[0];
       dispatch({
